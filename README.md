@@ -1,7 +1,7 @@
 # TabSwitchDetection
-This simple Tab Switching Detection project been created as part of AI exam proctoring project, in which, it will detect Tab Switching during the online exam if the user tries to switch the tab.
+This simple Tab Switching Detection project been created as part of AI exam proctoring project, in which, it will detect Tab Switching and the window switching during the online exam if the user tries to switch it.
 
-It not only will detect the tab switch as well as window switch and also exam site will be closed if the user tried to switch it from exam site to another site more than 10 times.
+And also the exam site will be closed if the user tried to switch it from exam site to another site or to an another window more than 10 times.
 
 The totalViolationCount tracks both tab switches and window switches, Violations are incremented for either event.
 The user is alerted whether the violation was due to a tab switch or window switch and the remaining chances are displayed dynamically.
