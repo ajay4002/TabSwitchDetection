@@ -3,10 +3,10 @@ var statusText = document.getElementById("status");
 
 // Tab switch tracking variables
 var tabSwitchCount = 0;
-var maxTabSwitches = 10; 
+var maxTabSwitches = 10;
 
 // Other window usage tracking variables
-var windowSwitchCount = 0; 
+var windowSwitchCount = 0;
 var maxWindowSwitches = 10;
 
 // Combined violation tracking
@@ -32,8 +32,15 @@ function handleViolation(type) {
   // Check if limits are exceeded
   if (totalViolationCount >= maxTotalViolations) {
     alert("You have exceeded the maximum allowed violations. The test will now close.");
-    window.close(); // An attempt to close the tab
+    closeWindow(); // Call the function to close the tab
   }
+}
+
+// Function to attempt closing the window
+function closeWindow() {
+  // Attempt to close the window
+  window.open("", "_self"); // Needed for some browsers to allow self-closing
+  window.close();
 }
 
 // Detect tab visibility change
